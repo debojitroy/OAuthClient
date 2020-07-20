@@ -8,6 +8,8 @@ const Home = lazy(() => import("./components/Home"));
 
 const Login = lazy(() => import("./components/Login/Login"));
 
+const GithubRedirection = lazy(() => import("./components/Login/Github"));
+
 const NotFound = lazy(() => import("./components/Error/404"));
 
 const App = () => {
@@ -20,6 +22,7 @@ const App = () => {
           <Switch>
             <Route exact path={Routes.HOME} component={Home} />
             <Route exact path={Routes.LOGIN} component={Login} />
+            <Route exact path={Routes.GITHUB_LOGIN} component={GithubRedirection} />
             <Route
               render={() => (
                 <NotFound
